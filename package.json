@@ -1,6 +1,6 @@
 {
   "name": "brave",
-  "version": "0.61.0",
+  "version": "0.66.46",
   "description": "Next generation Brave browser for macOS, Windows, Linux, and eventually Android",
   "scripts": {
     "audit_deps": "node ./scripts/audit.js",
@@ -18,6 +18,7 @@
     "push_l10n": "node ./scripts/commands.js push_l10n",
     "pull_l10n": "node ./scripts/commands.js pull_l10n",
     "chromium_rebase_l10n": "node ./scripts/commands.js chromium_rebase_l10n",
+    "lint": "node ./scripts/commands.js lint",
     "test": "node ./scripts/commands.js test",
     "test-security": "npm run audit_deps && node ./scripts/commands.js start --enable_brave_update --network_log --user_data_dir_name=brave-network-test"
   },
@@ -25,7 +26,7 @@
     "projects": {
       "chrome": {
         "dir": "src",
-        "tag": "72.0.3626.17",
+        "tag": "74.0.3729.131",
         "repository": {
           "url": "https://chromium.googlesource.com/chromium/src.git"
         },
@@ -46,6 +47,9 @@
           "url": "https://github.com/brave/brave-core.git"
         }
       }
+    },
+    "widevine": {
+      "version": "4.10.1196.0"
     }
   },
   "repository": {

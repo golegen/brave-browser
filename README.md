@@ -11,9 +11,6 @@ This repository holds the build tools needed to build the Brave desktop browser 
   - [brave-core](https://github.com/brave/brave-core)
     - Mounted at `src/brave`.
     - Maintains patches for 3rd party Chromium code.
-  - [brave-extension](https://github.com/brave/brave-extension)
-    - Mounted at `src/brave/vendor/brave-extension`.
-    - Browser action extension which implements the UI for the shields panel.
   - [ad-block](https://github.com/brave/ad-block)
     - Mounted at `src/brave/vendor/ad-block`.
     - Implements Brave's ad-block engine.
@@ -33,7 +30,7 @@ You can [visit our website](https://brave.com/downloads.html) to get the latest 
 
 For other versions of our browser, please see:
 
-* iPhone - [brave/browser-ios](https://github.com/brave/browser-ios)
+* iOS - [brave/brave-ios](https://github.com/brave/brave-ios)
 * Android - [brave/browser-android-tabs](https://github.com/brave/browser-android-tabs)
 
 ## Community
@@ -42,7 +39,5 @@ For other versions of our browser, please see:
 [discuss features you'd like to see](https://community.brave.com/c/feature-requests), and a lot more. We'd love to have your help so that we can continue improving Brave.
 
 Help us translate Brave to your language by submitting translations at https://www.transifex.com/brave/brave/
-
-Join our [Discord community chat](https://discordapp.com/invite/k57tYrS) for higher bandwidth discussions.
 
 Follow [@brave](https://twitter.com/brave) on Twitter for important news and announcements.

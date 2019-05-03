@@ -16,11 +16,16 @@ const syncDir = path.join(braveDir, 'components', 'brave_sync', 'extension')
  */
 function npmAudit (pathname) {
   if (fs.existsSync(path.join(pathname, 'package.json')) &&
-    fs.existsSync(path.join(pathname, 'package-lock.json'))) {
+    fs.existsSync(path.join(pathname, 'package-lock.json')) &&
+    fs.existsSync(path.join(pathname, 'node_modules'))) {
     console.log('Auditing', pathname)
-    util.run('npm', ['audit'], { cwd: pathname })
+    let cmdOptions = {
+      cwd: pathname,
+      shell: process.platform === 'win32' ? true : false
+    }
+    util.run('npm', ['audit'], cmdOptions)
   } else {
-    console.log('Skipping audit of', pathname)
+    console.log('Skipping audit of "' + pathname + '" (no package.json or node_modules directory found)')
   }
 }
 
